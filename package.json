@@ -1,0 +1,13 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run start:dev --prefix ecommerce-backend\" \"npm run dev --prefix ecommerce-frontend/my-next-app\"",
+    "dev:backend": "npm run start:dev --prefix ecommerce-backend",
+    "dev:frontend": "npm run dev --prefix ecommerce-frontend/my-next-app"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
